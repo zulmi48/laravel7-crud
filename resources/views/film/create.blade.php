@@ -3,6 +3,13 @@
 @section('title','Tambah Data')
 
 @section('content')
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/film">Film</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create</li>
+    </ol>
+</nav>
 <h2>Tambahkan data baru!</h2>
 <form class="" action="/film" method="post">
     @csrf
