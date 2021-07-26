@@ -17,3 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/film', 'FilmController@index');
+Route::get('/film/create', 'FilmController@create');
+Route::post('/film', 'FilmController@store');
