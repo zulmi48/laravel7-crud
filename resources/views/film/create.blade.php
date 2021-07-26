@@ -3,7 +3,7 @@
 @section('title','Tambah Data')
 
 @section('content')
-<h2>ini adalah halaman Create</h2>
+<h2>Tambahkan data baru!</h2>
 <form class="" action="/film" method="post">
     @csrf
     <div class="input-group mb-3">
