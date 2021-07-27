@@ -19,3 +19,5 @@ Route::get('/', function () {
 Route::get('/film', 'FilmController@index');
 Route::get('/film/create', 'FilmController@create');
 Route::post('/film', 'FilmController@store');
+Route::get('/film/{id}/edit', 'FilmController@edit');
+Route::put('/film/{id}', 'FilmController@update');

@@ -25,4 +25,18 @@ class FilmController extends Controller
         ]);
         return redirect('/film')->with(['alert' => 'create']);
     }
+    public function edit($id)
+    {
+        $film=Film::find($id);
+        return view('film.edit', compact('film'));
+    }
+    public function update(Request $request, $id)
+    {
+        Film::find($id)->update([
+          'judul' => $request->judul,
+          'genre' => $request->genre,
+          'sinopsis' => $request->sinopsis
+        ]);
+        return redirect('/film')->with(['alert' => 'update']);
+    }
 }
