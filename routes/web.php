@@ -21,3 +21,4 @@ Route::get('/film/create', 'FilmController@create');
 Route::post('/film', 'FilmController@store');
 Route::get('/film/{id}/edit', 'FilmController@edit');
 Route::put('/film/{id}', 'FilmController@update');
+Route::delete('/film/{id}', 'FilmController@destroy');

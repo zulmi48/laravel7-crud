@@ -30,8 +30,13 @@
         <h5 class="card-title">{{ $film->judul }}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ $film->genre }}</h6>
         <p class="card-text">{{ $film->sinopsis }}</p>
-        <a href="/film/{{$film->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
-        <a href="#" class="btn btn-danger btn-sm">Delete</a>
+        <form class="form-inline" action="/film/{{$film->id}}" method="post">
+            @method('DELETE')
+            @csrf
+            <a href="/film/{{$film->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+            <button class="btn btn-danger btn-sm mx-2" type="submit" name="button">Delete</button>
+        </form>
+
     </div>
 </div>
 @endforeach

@@ -39,4 +39,9 @@ class FilmController extends Controller
         ]);
         return redirect('/film')->with(['alert' => 'update']);
     }
+    public function destroy($id)
+    {
+        Film::find($id)->delete();
+        return redirect('/film')->with(['alert' => 'delete']);
+    }
 }
