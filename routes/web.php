@@ -16,9 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// Route CRUD
 Route::get('/film', 'FilmController@index');
 Route::get('/film/create', 'FilmController@create');
 Route::post('/film', 'FilmController@store');
 Route::get('/film/{id}/edit', 'FilmController@edit');
 Route::put('/film/{id}', 'FilmController@update');
 Route::delete('/film/{id}', 'FilmController@destroy');
+
+// Route Authentication
+Route::get('/login', 'AuthController@LoginView');
